@@ -22,7 +22,7 @@ public class UITest {
 
         $("[data-test-id=date] input").setValue(getSecondDate());
         $(".button__text").click();
-        $("[data-test-id=replan-notification] button").click();
+        $("[data-test-id=replan-notification] .button__text").click();
         $("[data-test-id=success-notification]").shouldHave(Condition.cssClass("notification_visible"));
 
     }
