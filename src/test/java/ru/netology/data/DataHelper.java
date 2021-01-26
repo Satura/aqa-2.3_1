@@ -11,7 +11,7 @@ public class DataHelper {
     private static final Faker faker = new Faker(new Locale("ru"));
 
     public static String getCity(){
-        return faker.address().cityName();
+        return faker.address().cityName().replace("Новокузнецк", "Курск").replace("Сочи", "Тула");
     }
 
     public static String getPhone(){
@@ -27,6 +27,6 @@ public class DataHelper {
     }
 
     public static String getName(){
-        return faker.name().fullName();
+        return faker.name().lastName().replace("ё", "е") + " " + faker.name().firstName().replace("ё", "е");
     }
 }
