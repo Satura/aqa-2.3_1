@@ -18,12 +18,8 @@ public class DataHelper {
         return faker.phoneNumber().phoneNumber();
     }
 
-    public static String getFirstDate(){
-        return LocalDate.now().plusDays(4).format(DateTimeFormatter.ofPattern("dd.MM.yyyy"));
-    }
-
-    public static String getSecondDate(){
-        return LocalDate.now().plusDays(8).format(DateTimeFormatter.ofPattern("dd.MM.yyyy"));
+    public static String getShiftedDate(int daysToShift){
+        return LocalDate.now().plusDays(daysToShift).format(DateTimeFormatter.ofPattern("dd.MM.yyyy"));
     }
 
     public static String getName(){
