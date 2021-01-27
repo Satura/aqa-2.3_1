@@ -14,7 +14,6 @@ public class UITest {
     void shouldSuccessReplanDate(){
         open("http://localhost:9999/");
         $("[data-test-id=city] input").setValue(getCity());
-
         $("[data-test-id=date] input").sendKeys(Keys.chord(Keys.SHIFT, Keys.HOME), Keys.BACK_SPACE, getShiftedDate(5));
         $("[data-test-id=name] input").setValue(getName());
         $("[data-test-id=phone] input").setValue(getPhone());
